@@ -19,21 +19,21 @@ pipeline {
 
     // Add more stages as needed
 
-    stage('Deploy') {
-      steps {
-        // Deploy your Dockerized PHP website
-        // Add the necessary deployment steps here
-      }
-    }
+//     stage('Deploy') {
+//       steps {
+//         // Deploy your Dockerized PHP website
+//         // Add the necessary deployment steps here
+//       }
+//     }
   }
 
   // Define the steps for the branch
   // Replace 'your-branch-name' with the actual name of your branch
   // Add the necessary steps for this branch
-  branch 'main' {
-    steps {
-      // Add the specific steps for this branch
-      // For example, additional testing or deployment steps
-    }
-  }
+//   branch 'main' {
+//     steps {
+//       // Add the specific steps for this branch
+//       // For example, additional testing or deployment steps
+//     }
+//   }
 }
