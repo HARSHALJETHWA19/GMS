@@ -6,7 +6,7 @@ pipeline {
       steps {
         // Build the Docker image
         script {
-          docker.build('gym-app')
+          docker.build('gms-app')
         }
       }
     }
@@ -15,8 +15,8 @@ pipeline {
       steps {
         // Run tests or other necessary steps specific to your project
         // For example:
-        sh 'docker run gym-app phpunit'
-      }
+        sh 'docker run gms-app phpunit'
+      }g
     }
 
     stage('Deploy') {
