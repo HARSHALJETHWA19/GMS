@@ -4,31 +4,25 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        // Build the Docker image
-        script {
-          docker.build('gms-app')
-        }
+        // Build your PHP website Docker image
+        sh 'docker build -t gms-app .'
       }
     }
 
     stage('Test') {
       steps {
         // Run tests or other necessary steps specific to your project
-        // For example:
+        // For example, running PHPUnit tests inside the Docker container
         sh 'docker run gms-app phpunit'
-      }g
+      }
     }
+
+    // Add more stages as needed
 
     stage('Deploy') {
       steps {
-        // Stop and remove the existing containers
-        sh 'docker-compose down'
-
-        // Pull the latest changes from the Git repository
-        sh 'git pull'
-
-        // Rebuild and deploy the updated Dockerized PHP website
-        sh 'docker-compose up -d'
+        // Deploy your Dockerized PHP website
+        // Add the necessary deployment steps here
       }
     }
   }
