@@ -26,4 +26,14 @@ pipeline {
       }
     }
   }
+
+  // Define the steps for the branch
+  // Replace 'your-branch-name' with the actual name of your branch
+  // Add the necessary steps for this branch
+  branch 'main' {
+    steps {
+      // Add the specific steps for this branch
+      // For example, additional testing or deployment steps
+    }
+  }
 }
